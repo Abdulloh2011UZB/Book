@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#fff;
+}
+
+.about{
+max-width:1200px;
+margin:auto;
+padding:80px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+flex-wrap:wrap;
+}
+
+
+.content{
+flex:1;
+}
+
+.content h4{
+color:#38bdf8;
+font-size:20px;
+margin-bottom:10px;
+}
+
+.content h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.content p{
+color:#cbd5e1;
+font-size:18px;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+text-decoration:none;
+background:#38bdf8;
+color:white;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 30px rgba(56,189,248,.4);
+}
+
+.skills{
+padding:70px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:35px;
+border-radius:20px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#334155;
+}
+
+.card h2{
+color:#38bdf8;
+margin:20px 0;
+}
+
+.card p{
+color:#cbd5e1;
+line-height:1.7;
+}
+
+.stats{
+padding:60px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+}
+
+.box{
+background:#1e293b;
+padding:30px;
+text-align:center;
+border-radius:20px;
+}
+
+.box h1{
+font-size:45px;
+color:#38bdf8;
+}
+
+.box p{
+margin-top:10px;
+color:#cbd5e1;
+}
+
+footer{
+margin-top:60px;
+padding:25px;
+text-align:center;
+background:#020617;
+color:#94a3b8;
+}
+
+@media(max-width:900px){
+
+.about{
+flex-direction:column;
+text-align:center;
+}
+
+.content h1{
+font-size:40px;
+}
+
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="about">
+
+<div class="content">
+
+<h4>Salom 👋</h4>
+
+<h1>Men Yusuf</h1>
+
+<p>
+Men zamonaviy web-saytlar yaratishga qiziqadigan dasturchiman.
+HTML, CSS, JavaScript va Flutter yordamida tezkor, chiroyli va responsive loyihalar yarataman. Doimo yangi texnologiyalarni o'rganishga va o'zimni rivojlantirishga harakat qilaman.
+</p>
+
+<a href="#" class="btn">Bog'lanish</a>
+
+</div>
+
+</section>
+
+<section class="skills">
+
+<div class="card">
+<h2>💻 Frontend</h2>
+<p>HTML, CSS, JavaScript va zamonaviy UI dizaynlar.</p>
+</div>
+
+<div class="card">
+<h2>📱 Flutter</h2>
+<p>Android va iOS uchun mobil ilovalar yaratish.</p>
+</div>
+
+<div class="card">
+<h2>🚀 Maqsad</h2>
+<p>Har bir loyiha sifatli, tezkor va foydalanuvchi uchun qulay bo'lishi.</p>
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="box">
+<h1>20+</h1>
+<p>Loyihalar</p>
+</div>
+
+<div class="box">
+<h1>100%</h1>
+<p>O'rganishga ishtiyoq</p>
+</div>
+
+<div class="box">
+<h1>24/7</h1>
+<p>Yangi bilimlarni o'rganish</p>
+</div>
+
+<div class="box">
+<h1>∞</h1>
+<p>G'oyalar</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Yusuf | About Me
+</footer>
+
+</body>
+</html>
+
