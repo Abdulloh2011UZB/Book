@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ergashev | Shaxsiy Portfolio</title>
+    
+    <!-- Google Fonts (Zamonaviy shrift) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stillar shu yerda (main.css o'rniga) -->
+    <style>
+        /* Umumiy sozlamalar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0f172a; /* Toʻq zamonaviy rang */
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        /* Navigatsiya paneli */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: rgba(15, 23, 42, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #3b82f6; /* Neon koʻk rang */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #3b82f6;
+        }
+
+        /* Asosiy Hero qism */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent);
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-content .highlight {
+            color: #3b82f6;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: #3b82f6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2563eb;
+            transform: translateY(-3px);
+        }
+
+        /* Boʻlimlar sarlavhasi */
+        section {
+            padding: 80px 8%;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: #3b82f6;
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Men haqimda */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 18px;
+            color: #94a3b8;
+            line-height: 1.8;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-card {
+            background-color: #1e293b;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Xizmatlar kartalari */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 40px 30px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+            border-color: #3b82f6;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+
+        /* Footer / Aloqa */
+        footer {
+            background-color: #0b0f19;
+            padding: 60px 8% 20px 8%;
+            text-align: center;
+        }
+
+        footer p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        footer .email {
+            font-size: 24px;
+            color: #3b82f6;
+            font-weight: 600;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+        }
+
+        /* Mobil qurilmalar (Responsive) */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px 5%;
+            }
+            nav ul {
+                display: none;
+            }
+            .hero-content h1 {
+                font-size: 38px;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigatsiya paneli -->
+    <header class="navbar">
+        <div class="logo">ERGASHEV<span>.</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Asosiy</a></li>
+                <li><a href="#about">Men haqimda</a></li>
+                <li><a href="#services">Xizmatlar</a></li>
+                <li><a href="#contact">Aloqa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Asosiy qism (Hero Section) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Salom, men <span class="highlight">Ergashev</span></h1>
+            <p>Zamonaviy veb-dasturchi va dizayner. Men raqamli dunyoda gʻoyalarni haqiqatga aylantiraman.</p>
+            <a href="#contact" class="btn">Bogʻlanish</a>
+        </div>
+    </section>
+
+    <!-- Men haqimda qismi -->
+    <section id="about" class="about">
+        <h2>Men haqimda</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Mening maqsadim — foydalanuvchilarga qulay, tezkor va zamonaviy veb-saytlar yaratish. Har bir loyihaga oʻzgacha yondashaman va sifatga katta e'tibor beraman.</p>
+            </div>
+            <div class="skills">
+                <div class="skill-card">HTML / CSS</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">UX/UI Dizayn</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Xizmatlar qismi -->
+    <section id="services" class="services">
+        <h2>Xizmatlar</h2>
+        <div class="services-container">
+            <div class="card">
+                <h3>Veb Dasturlash</h3>
+                <p>Zamonaviy standartlarga javob beradigan mukammal va tezkor saytlar tayyorlash.</p>
+            </div>
+            <div class="card">
+                <h3>UI/UX Dizayn</h3>
+                <p>Foydalanuvchilar uchun tushunarli va chiroyli interfeys dizaynlarini chizish.</p>
+            </div>
+            <div class="card">
+                <h3>SEO optimizatsiya</h3>
+                <p>Saytingizni qidiruv tizimlarida (Google, Yandex) yuqori oʻrinlarga koʻtarish.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Aloqa -->
+    <footer id="contact">
+        <h2>Men bilan bogʻlaning</h2>
+        <p>Loyiha buyurtma qilmoqchimisiz yoki savollaringiz bormi?</p>
+        <p class="email">info@ergashev.com</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ergashev Page. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
