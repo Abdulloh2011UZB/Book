@@ -1,0 +1,8 @@
+<h2>Kitob qo'shish</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <h1>Kitobni o'chirmoqchimisiz ?</h1>
+    <button type="submit">Ha</button>
+</form>

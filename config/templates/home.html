@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Home</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            margin: 40px;
+        }
+
+        .container{
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        .category{
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .category a{
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .add-btn{
+            display: block;
+            text-align: center;
+            background: #007bff;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .add-btn:hover{
+            background: #0056b3;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📚 Book Management</h1>
+
+    <a href="{% url 'book_create' %}" class="add-btn">
+        + Kitob qo'shish
+    </a>
+
+    <hr>
+
+    {% for category in categories %}
+        <div class="category">
+            <a href="{% url 'category_books' category.id %}">
+                {{ category.name }}
+            </a>
+        </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
